@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -9,17 +13,32 @@ body {
   margin: 0;
   background: #aaa;
   color: #333;
-  /* I'll give you this one for free lol */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .modal {
+  padding: 12px;
   background: white;
-  width: 480px;
+  width: 500px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  gap: 12px;
+}
+
+.modal-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .icon {
@@ -33,21 +52,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
-  background: #eee;
+  padding: 0;
   border-radius: 50%;
   color: #888;
-  font-weight: 400;
+  background: #eee;
   font-size: 16px;
-  height: 24px;
+  font-weight: 400;
+  border: 1px solid #eee;
   width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #eee;
-  padding: 0;
+  flex-shrink: 0;
+}
+
+.button-row {
+  margin-top: 8px;
 }
 
 button {
